@@ -41,7 +41,7 @@ public class Snake {
         } else {
             position = position - dice1;
             if (position < 0) {
-                position = 0;
+                position = 100;
             }
             System.out.println("The position received Snake so move backward by" + position);
         }
