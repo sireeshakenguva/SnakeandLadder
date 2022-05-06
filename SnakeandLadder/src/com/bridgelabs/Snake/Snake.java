@@ -9,12 +9,13 @@ public class Snake {
 	public static  void main(String[] args){
 	    System.out.println("Welcome to Snake Ladder Program");
 	     
-        Scanner read = new Scanner(System.in);
-        int num = 0;
+        //Scanner read = new Scanner(System.in);
+        
         int position = 0;
         int dice1;
+        int count =0;
         Random random = new Random();;
-        System.out.println("The position  number is at 0 ");
+        System.out.println("The position  number is at 0 ");// position starts from zero
         while (position < 100) {
         
         
@@ -41,7 +42,7 @@ public class Snake {
         } else {
             position = position - dice1;
             if (position < 0) {
-                position = 100;
+                position = 0;
             }
             System.out.println("The position received Snake so move backward by" + position);
         }
@@ -52,5 +53,7 @@ public class Snake {
         if (position > 100) {
             position = position;
         }
+        
+		System.out.println("dice count" + count);
 }
 }
